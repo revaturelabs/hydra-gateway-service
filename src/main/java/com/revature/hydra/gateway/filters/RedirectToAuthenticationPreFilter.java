@@ -2,7 +2,7 @@
 *  A filter is too restrictive to do all of the needed authentication, redirect to authentication service
 *  instead
 */
-package com.revature.caliber.filters;
+package com.revature.hydra.gateway.filters;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 public class RedirectToAuthenticationPreFilter extends ZuulFilter {
  
 	@Value("#{systemEnvironment['CALIBER_DEV_MODE']}")
-	private boolean debug;
+	private Boolean debug;
 
     @Override
     public String filterType() {
