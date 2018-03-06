@@ -1,4 +1,4 @@
-package com.revature.caliber.swagger;
+package com.revature.hydra.gateway.swagger;
 
 import java.util.ArrayList;
 import java.util.List;
