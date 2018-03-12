@@ -68,7 +68,7 @@ public class ZuulServiceApplication {
 //    source.registerCorsConfiguration("/**", config);
 //    return new CorsFilter(source);
 //  }
-
+//
 //  @Bean
 //  public RedirectToAuthenticationPreFilter redirectFilter() {
 //    return new RedirectToAuthenticationPreFilter();
