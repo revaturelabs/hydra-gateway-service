@@ -14,8 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class RedirectToAuthenticationPreFilter extends ZuulFilter {
 
-	@Value("#{systemEnvironment['CALIBER_DEV_MODE']}")
-	private Boolean debug;
+	//@Value("#{systemEnvironment['CALIBER_DEV_MODE']}")
+	private Boolean debug = false;
 
 	@Override
 	public String filterType() {
