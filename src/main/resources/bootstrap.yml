@@ -1,10 +1,12 @@
 spring: 
   application: 
-    name: zuul
-  cloud: 
-    config: 
-      uri: http://localhost:8888
-
+    name: hydra-gateway-service
 security:
   basic:
     enabled: false
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
