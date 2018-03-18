@@ -20,7 +20,7 @@ zuul:
       stripPrefix: false
       serviceId: hydra-user-service
     topic:
-      path: /api/v2/topic/**
+      path: /api/v2/subtopic/**
       stripPrefix: false
       serviceId: hydra-topic-service
     calendar:
