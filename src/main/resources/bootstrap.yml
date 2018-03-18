@@ -23,6 +23,10 @@ zuul:
       path: /api/v2/topic/**
       stripPrefix: false
       serviceId: hydra-topic-service
+    calendar:
+      path: /api/v2/calendar/**
+      stripPrefix: false
+      serviceId: hydra-topic-service
     curriculum:
       path: /api/v2/curriculum/**
       stripPrefix: false
