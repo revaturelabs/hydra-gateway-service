@@ -8,7 +8,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: http://18.219.59.193:8761/eureka/
+      defaultZone: http://18.217.13.6:8761//eureka/
 zuul:
   routes:
     batch:
