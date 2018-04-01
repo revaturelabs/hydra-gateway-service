@@ -25,6 +25,12 @@ zuul:
     batch:
       path: /batch/**
       serviceId: batch
+    curriculum:
+      path: /curriculum/**
+      serviceId: curriculum
+    address:
+      path: /address/**
+      serviceId: address
     endpoints:
       routes:
         enabled: true
