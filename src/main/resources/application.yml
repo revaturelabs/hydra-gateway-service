@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    services:
+      registrationMethod: direct
+
+eureka:
+  client:
+    register-with-eureka: true
+    leaseRenewalIntervalInSeconds: 10
+    healthcheck:
+      enabled: true
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 20
+
+security:
+  basic:
+    enabled: false
+
+zuul:
+  prefix: /api
+  routes:
+    batch:
+      path: /batch/**
+      serviceId: batch
+    endpoints:
+      routes:
+        enabled: true

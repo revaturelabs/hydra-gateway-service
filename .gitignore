@@ -31,3 +31,5 @@
 #Mac
 .DS_Store
 /.recommenders/
+
+.vscode
