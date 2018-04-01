@@ -22,15 +22,24 @@ security:
 zuul:
   prefix: /api
   routes:
+    address:
+      path: /address/**
+      serviceId: address
     batch:
       path: /batch/**
       serviceId: batch
     curriculum:
       path: /curriculum/**
       serviceId: curriculum
-    address:
-      path: /address/**
-      serviceId: address
+    skills:
+      path: /skills/**
+      serviceId: skills
+    trainer:
+      path: /trainer/**
+      serviceId: trainer
+    unavailable:
+      path: /unavailable/**
+      serviceId: unavailable
     endpoints:
       routes:
         enabled: true
