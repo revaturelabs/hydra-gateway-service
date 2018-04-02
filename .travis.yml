@@ -9,5 +9,5 @@ deploy:
   organization: august-duet.org
   space: development
   on:
-    repo: revaturelabs/hydra-batch-service
+    repo: revaturelabs/hydra-gateway-service
     branch: develop
