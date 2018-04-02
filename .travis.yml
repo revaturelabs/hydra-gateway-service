@@ -1,5 +1,6 @@
 language: java
 deploy:
+  skip_cleanup: true
   provider: cloudfoundry
   api: https://api.run.pivotal.io
   username: email@bryton.io
