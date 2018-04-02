@@ -1,0 +1,13 @@
+language: java
+
+deploy:
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: email@bryton.io
+  password:
+    secure: lA+zUJzZ81t51gpa0ZQYyBcPzkXiesBTP40Z4lHRiPmJ8Dzc9S0MigCn2NPP4S3pUSAzkme22FMnM1xNWG8E2EQKtTKRLL22HZYKjHBrMHLn0V6Z6PIUvCHUFRK2PzngfYLHTbnZBT7yMkE919XP+eQFAebl8gfdaeziMLZ2SiiF8xzO9b7EetquljOd/rki9guLbuc3RT8s13Z+ZWqzeYkqPWlBVFwAlZUFbT/FZKp0TU4Z+RxW/MrbnrzMoR5KNfJYGU1BQIMggC78huIEjDzPJQ5IV36tbDHycLWVijVefIC0ixqx7S1FhDE8xHPWLE5esMRBPsStKF5phipDgpohF1NeLZ4lKVrT9XjCkiUi6e3oHqg5A331EKsujCayJ2U7Rd4/fEZLUyRFMHwVAplh8EWKDQRY93Z3j1ZHkYHioIwLaeEbaj3H4kWbgWJGX3tYoOxjkjMUqGZ85YceeOFQVItCTyCTVOOLxGVKu0963yQ/iRPOlpi0kI/Z3p1dbcOUB/SyrSPlZ9EJfTvT7JjszlgOtrr9WFJq46kzgPRsMJtl6a0rJTu55QGegRh68eBGPDXq5VI3cOmEYaN8sD3XGyj//sKsSC3XBE1yP33u9P+7Z4+mQjvCJ5Q+VCYAwNF4IMLrhG9QTEE/CRO8qtZDhw7k7Dsp4PbGvz/9sHQ=
+  organization: august-duet.org
+  space: development
+  on:
+    repo: revaturelabs/hydra-batch-service
+    branch: develop
