@@ -1,10 +1,33 @@
 spring: 
   application: 
-    name: zuul
-  cloud: 
-    config: 
-      uri: http://localhost:8888
-
-security:
-  basic:
-    enabled: false
+    name: hydra-gateway-service
+server:
+  port: 8800
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://18.219.59.193:8761/eureka
+zuul:
+  routes:
+    batch:
+      path: /api/v2/batch/**
+      stripPrefix: false
+      serviceId: hydra-batch-service
+    user:
+      path: /api/v2/user/**
+      stripPrefix: false
+      serviceId: hydra-user-service
+    topic:
+      path: /api/v2/subtopic/**
+      stripPrefix: false
+      serviceId: hydra-topic-service
+    calendar:
+      path: /api/v2/calendar/**
+      stripPrefix: false
+      serviceId: hydra-topic-service
+    curriculum:
+      path: /api/v2/curriculum/**
+      stripPrefix: false
+      serviceId: hydra-curriculum-service
