@@ -1,4 +1,9 @@
 language: java
+addons:
+  sonarcloud:
+    organization: hall-github
+    token:
+      secure: Sowb64c9iMACRf5//C6x0NsAVedC3aBerRjqOy7imT6xQattEYoM89nh7P4K5yBt0Xmw76RVj2W0OWwby/nnwqF89Bx7JnFUHIgxMhyE29eWTZ94O3CgF9KXC6mYFwpQtP6QzGwsjJbGEGBKz3fgkeUcSrJRBRvk2F8OO7yIo8Z/JffOZQzNRP+yab9HFP2ZWaoMPXnTrVzpVo/GtSBSoo649zBy+1Hgfv/hCOyxzPOtWUf0KL6egOnwbSvXSsMx21h1uTycjiqyDdxoWViDBf+npMZjZdJP+K6rtGJhh3j6WIml/7TsdO6rmdr4nIq/VqB85AvMpcwswWNj3s9wFv0mrI23DWhcf9WiySsE4ASnnCVcpkpzb7K53JXz9FupYKKa514HC+WgrhYrBDHYKgR+6G38IhuQE1nWNrd27l1Y5kfZ2cgebJNZJx8/tiMN3a5z2HLdqc/st16+yXnf45Ib/Q06zJOzsCDZHKjKxfH+igbvQD/opaAGhV4287v9GCt7MK9nbJZodEcGxXyCXxGPwvmfkgjE+HPD7PfdpN+r05jP+W9+Xr055Iz0VNtJXEyHrCCF1oePHyrpbs8p/V+h5q8M81ATcXg66GmVUaXGpYUeyrzKrRkD5k6aYAivOIPzqeQW771imW+4zP2YxqzfXi9Z8VZZWwjUXu2zrM4=
 deploy:
   skip_cleanup: true
   provider: cloudfoundry
