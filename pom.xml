@@ -8,7 +8,7 @@
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>gateway</name>
+	<name>hydra-gateway-service</name>
 	<description>The hydra gateway service</description>
 
 	<parent>
