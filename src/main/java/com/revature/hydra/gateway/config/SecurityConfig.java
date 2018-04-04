@@ -11,7 +11,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity
-// @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value(value = "${AUTH0_APIAUDIENCE}")
@@ -30,56 +29,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/swagger-resources/**", "/api/*/v2/api-docs").permitAll()
                 .anyRequest().authenticated();
     }
-
-    // @Bean
-    // CorsConfigurationSource corsConfigurationSource() {
-    //     CorsConfiguration configuration = new CorsConfiguration();
-    //     configuration.setAllowedOrigins(Arrays.asList("*"));
-    //     configuration.setAllowedMethods(Arrays.asList("GET","POST"));
-    //     UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    //     source.registerCorsConfiguration("/**", new CorsConfiguration().applyPermitDefaultValues());
-    //     return source;
-    // }
-
-//  @Bean
-//  public CorsFilter corsFilter() {
-//    final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//    final CorsConfiguration config = new CorsConfiguration();
-//    config.setAllowCredentials(true);
-//    config.addAllowedOrigin("*");
-//    config.addAllowedHeader("*");
-//    config.addAllowedMethod("OPTIONS");
-//    config.addAllowedMethod("HEAD");
-//    config.addAllowedMethod("GET");
-//    config.addAllowedMethod("PUT");
-//    config.addAllowedMethod("POST");
-//    config.addAllowedMethod("DELETE");
-//    config.addAllowedMethod("PATCH");
-//    source.registerCorsConfiguration("/**", config);
-//    return new CorsFilter(source);
-
-//  @Bean
-//  public CorsFilter corsFilter() {
-//    final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//    final CorsConfiguration config = new CorsConfiguration();
-//    config.setAllowCredentials(true);
-//    config.addAllowedOrigin("*");
-//    config.addAllowedHeader("*");
-//    config.addAllowedMethod("OPTIONS");
-//    config.addAllowedMethod("HEAD");
-//    config.addAllowedMethod("GET");
-//    config.addAllowedMethod("PUT");
-//    config.addAllowedMethod("POST");
-//    config.addAllowedMethod("DELETE");
-//    config.addAllowedMethod("PATCH");
-//    source.registerCorsConfiguration("/**", config);
-//    return new CorsFilter(source);
-//  }
-//
-//  @Bean
-//  public RedirectToAuthenticationPreFilter redirectFilter() {
-//    return new RedirectToAuthenticationPreFilter();
-//  }
-//  
 
 }
