@@ -1,33 +1,48 @@
-# git ls-files --others --exclude-from=.git/info/exclude
-# Lines that start with '#' are comments.
-# For a project mostly in C, the following would be a good set of
-# exclude patterns (uncomment them if you want to use them):
-# *.[oa]
-# ~
-# .git/info/exclude
-
-/pull_request_template.md
-/issue_template.md
-/target/
-/bin/
-/META-INF/
-
 #Eclipse
-/.metadata
-/.project
-/.settings/
-/.classpath
-/.recommenders/
-/Servers
-/.springBeans
+/.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+**/local.properties
+**/*.settings/
+.loadpath
+**/*.recommenders
+**/*.project
+**/*.classpath
 
-#IDEA
-/.idea/
-/.iml
+# External tool builders
+.externalToolBuilders/
 
-#AngularJS
-**/.tern-project
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-#Mac
-.DS_Store
-/.recommenders/
+# Java annotation processor (APT)
+.factorypath
+
+### STS ###
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+#Java
+**/*.class
+**/*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+#target folder from Maven
+*/target/**
+
+#Servers folder from Tomcat
+*/Servers/**
