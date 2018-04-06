@@ -1,10 +1,12 @@
 spring: 
   application: 
-    name: zuul
-  cloud: 
+    name: hydra-gateway-service
+  cloud:
     config: 
-      uri: http://localhost:8888
+      uri: https://config-26a372bc-9469-49da-8378-47c57b903b36.cfapps.io
+  
 
 security:
   basic:
     enabled: false
+
