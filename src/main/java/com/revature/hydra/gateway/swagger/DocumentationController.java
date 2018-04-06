@@ -10,13 +10,21 @@ import org.springframework.stereotype.Component;
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
+/***
+ * DocumentationController is responsible for establishing Swagger
+ * documentation. Swagger ui can be accessed at:
+ * 		http://localhost:8800/swagger-ui.html 
+ *  
+ * @author Unknown
+ */
+
 @Component
 @Primary
 @EnableAutoConfiguration
-public class DocumentationController implements SwaggerResourcesProvider{
-	
+public class DocumentationController implements SwaggerResourcesProvider {
+
 	@Override
-    public List<SwaggerResource> get() {
+	public List<SwaggerResource> get() {
 		List<SwaggerResource> resources = new ArrayList<>();
 		resources.add(swaggerResource("trainer", "/trainer/v2/api-docs", "2.0"));
 		resources.add(swaggerResource("trainee", "/trainee/v2/api-docs", "2.0"));
@@ -31,16 +39,16 @@ public class DocumentationController implements SwaggerResourcesProvider{
 		resources.add(swaggerResource("category", "/category/v2/api-docs", "2.0"));
 		resources.add(swaggerResource("panel", "/panel/v2/api-docs", "2.0"));
 		resources.add(swaggerResource("reporting", "/reporting/v2/api-docs", "2.0"));
-		
 
 		return resources;
 	}
-	
+
 	private SwaggerResource swaggerResource(String name, String location, String version) {
-        SwaggerResource swaggerResource = new SwaggerResource();
-        swaggerResource.setName(name);
-        swaggerResource.setLocation(location);
-        swaggerResource.setSwaggerVersion(version);
-        return swaggerResource;
-    }
+		SwaggerResource swaggerResource = new SwaggerResource();
+		swaggerResource.setName(name);
+		swaggerResource.setLocation(location);
+		swaggerResource.setSwaggerVersion(version);
+
+		return swaggerResource;
+	}
 }
