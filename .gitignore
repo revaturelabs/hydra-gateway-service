@@ -6,12 +6,12 @@ tmp/
 *.bak
 *.swp
 *~.nib
-**/local.properties
-**/*.settings/
+local.properties
+.settings/
 .loadpath
-**/*.recommenders
-**/*.project
-**/*.classpath
+.recommenders
+.project
+.classpath
 
 # External tool builders
 .externalToolBuilders/
@@ -29,8 +29,8 @@ tmp/
 .recommenders/
 
 #Java
-**/*.class
-**/*.log
+.class
+.log
 
 # Package Files #
 *.jar
@@ -42,7 +42,7 @@ tmp/
 
 
 #target folder from Maven
-*/target/**
+target/
 
 #Servers folder from Tomcat
-*/Servers/**
+Servers/
