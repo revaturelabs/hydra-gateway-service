@@ -17,7 +17,7 @@ zuul:
       stripPrefix: false
       serviceId: hydra-batch-service
     user:
-      path: /api/v2/user/**
+      path: /api/v2/users/**
       stripPrefix: false
       serviceId: hydra-user-service
     topic:
