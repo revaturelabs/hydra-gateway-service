@@ -1,6 +1,6 @@
 ---
 applications:
 - name: gateway
-  path: ./target/gateway-0.0.1.jar
+  path: ./target/hydra-gateway-0.0.1.jar
   routes:
   - route: hydra.cfapps.io
