@@ -6,24 +6,21 @@ spring:
       uri: http://localhost:8888
 
 zuul:
+  prefix: /api/v2
   routes:
     batch:
-      path: /api/v2/batch/**
-      stripPrefix: false
+      path: /batches/**
+      stripPrefix: true
       serviceId: hydra-batch-service
     user:
-      path: /api/v2/users/**
-      stripPrefix: false
+      path: /users/**
+      stripPrefix: true
       serviceId: hydra-user-service
     topic:
-      path: /api/v2/subtopic/**
-      stripPrefix: false
-      serviceId: hydra-topic-service
-    calendar:
-      path: /api/v2/calendar/**
-      stripPrefix: false
+      path: /topics/**
+      stripPrefix: true
       serviceId: hydra-topic-service
     curriculum:
-      path: /api/v2/curriculum/**
-      stripPrefix: false
+      path: /curriculums/**
+      stripPrefix: true
       serviceId: hydra-curriculum-service
