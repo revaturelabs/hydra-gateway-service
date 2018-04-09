@@ -46,3 +46,4 @@ zuul:
     endpoints:
       routes:
         enabled: true
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
