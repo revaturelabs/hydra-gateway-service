@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.web.cors.CorsConfiguration;
 
 @Configuration
 @EnableWebSecurity
@@ -23,10 +24,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         JwtWebSecurityConfigurer
                 .forRS256(apiAudience, issuer)
                 .configure(http)
-                //.cors().and()//.csrf().disable()
+                .cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
+                .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/swagger-ui.*", "/webjars/springfox-swagger-ui/**",
-                        "/swagger-resources/**", "/api/v2/api-docs", "/v2/api-docs").permitAll()
+                .antMatchers(
+                    HttpMethod.GET,
+                    "/swagger-ui.*",
+                    "/webjars/springfox-swagger-ui/**",
+                    "/swagger-resources/**",
+                    "/api/v2/api-docs",
+                    "/v2/api-docs"
+                ).permitAll()
                 .anyRequest().authenticated();
     }
 
