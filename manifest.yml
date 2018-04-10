@@ -1,0 +1,7 @@
+applications:
+- name: hydra-gateway-service
+  memory: 700M
+  instances: 1
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  path: target/hydra-gateway-service-0.0.1-SNAPSHOT.jar
