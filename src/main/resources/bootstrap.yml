@@ -1,34 +1,26 @@
 spring: 
   application: 
     name: hydra-gateway-service
-server:
-  port: 8800
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-#      defaultZone: http://18.219.59.193:8761/eureka
+  cloud:
+    config:
+      uri: http://localhost:8888
+
 zuul:
+  prefix: /api/v2
   routes:
     batch:
-      path: /api/v2/batch/**
-      stripPrefix: false
+      path: /batches/**
+      stripPrefix: true
       serviceId: hydra-batch-service
     user:
-      path: /api/v2/user/**
-      stripPrefix: false
+      path: /users/**
+      stripPrefix: true
       serviceId: hydra-user-service
     topic:
-      path: /api/v2/subtopic/**
-      stripPrefix: false
-      serviceId: hydra-topic-service
-    calendar:
-      path: /api/v2/calendar/**
-      stripPrefix: false
+      path: /topics/**
+      stripPrefix: true
       serviceId: hydra-topic-service
     curriculum:
-      path: /api/v2/curriculum/**
-      stripPrefix: false
+      path: /curricula/**
+      stripPrefix: true
       serviceId: hydra-curriculum-service
