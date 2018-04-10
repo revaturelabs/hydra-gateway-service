@@ -21,6 +21,6 @@ zuul:
       stripPrefix: true
       serviceId: hydra-topic-service
     curriculum:
-      path: /curriculums/**
+      path: /curricula/**
       stripPrefix: true
       serviceId: hydra-curriculum-service
