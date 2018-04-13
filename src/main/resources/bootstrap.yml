@@ -3,6 +3,7 @@ spring:
     active: prod
   application: 
     name: hydra-gateway-service
+
 server:
   port: 9001
 
@@ -25,6 +26,11 @@ zuul:
       path: /curricula/**
       stripPrefix: true
       serviceId: hydra-curriculum-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
 
 ---
 
