@@ -1,7 +1,9 @@
 applications:
-- name: hydra-gateway-service
-  memory: 700M
+- name: hydra-gatway-service
+  memory: 1G
   instances: 1
-  random-route: true
+  random-route: false
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   path: target/hydra-gateway-service-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: prod
