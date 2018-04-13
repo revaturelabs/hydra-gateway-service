@@ -1,9 +1,10 @@
-spring: 
+spring:
+  profiles:
+    active: prod
   application: 
     name: hydra-gateway-service
-  cloud:
-    config:
-      uri: http://localhost:8888
+server:
+  port: 9001
 
 zuul:
   prefix: /api/v2
@@ -24,3 +25,19 @@ zuul:
       path: /curricula/**
       stripPrefix: true
       serviceId: hydra-curriculum-service
+
+---
+
+spring:
+  profiles: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+---
+
+spring:
+  profiles: prod
+  cloud:
+    config:
+      uri: https://hydra-config-service.cfapps.io/
