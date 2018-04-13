@@ -1,5 +1,5 @@
 applications:
-- name: hydra-gatway-service
+- name: hydra-gateway-service
   memory: 1G
   instances: 1
   random-route: false
