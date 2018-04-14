@@ -2,27 +2,7 @@ spring:
   profiles:
     active: dev
   application: 
-    name: hydra-gateway-service-dev
-
-zuul:
-  prefix: /api/v2
-  routes:
-    batch:
-      path: /batches/**
-      stripPrefix: true
-      serviceId: hydra-batch-service
-    user:
-      path: /users/**
-      stripPrefix: true
-      serviceId: hydra-user-service
-    topic:
-      path: /topics/**
-      stripPrefix: true
-      serviceId: hydra-topic-service
-    curriculum:
-      path: /curricula/**
-      stripPrefix: true
-      serviceId: hydra-curriculum-service
+    name: hydra-gateway-service-dev-test
 
 eureka:
   client:
@@ -45,6 +25,25 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+zuul:
+  prefix: /api/v2
+  routes:
+    batch:
+      path: /batches/**
+      stripPrefix: true
+      serviceId: hydra-batch-service
+    user:
+      path: /users/**
+      stripPrefix: true
+      serviceId: hydra-user-service
+    topic:
+      path: /topics/**
+      stripPrefix: true
+      serviceId: hydra-topic-service
+    curriculum:
+      path: /curricula/**
+      stripPrefix: true
+      serviceId: hydra-curriculum-service
 ---
 
 spring:
@@ -60,3 +59,27 @@ eureka:
   client:
     service-url:
       defaultZone: https://hydra-discovery-service.cfapps.io/eureka/
+
+zuul:
+  prefix: /api/v2
+  routes:
+    batch:
+      path: /batches/**
+      stripPrefix: true
+      serviceId: hydra-batch-service
+      url: https://hydra-batch-service.cfapps.io/
+    user:
+      path: /users/**
+      stripPrefix: true
+      serviceId: hydra-user-service
+      url: https://hydra-user-service.cfapps.io/
+    topic:
+      path: /topics/**
+      stripPrefix: true
+      serviceId: hydra-topic-service
+      url: https://hydra-topic-service.cfapps.io/
+    curriculum:
+      path: /curricula/**
+      stripPrefix: true
+      serviceId: hydra-curriculum-service
+      url: https://hydra-curriculum-service.cfapps.io/
