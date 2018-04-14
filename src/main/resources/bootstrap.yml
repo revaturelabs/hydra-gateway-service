@@ -27,6 +27,7 @@ zuul:
 eureka:
   instance:
     preferIpAddress: true
+    ip-address: ${server.address}
   client:
     register-with-eureka: true
     fetch-registry: true
