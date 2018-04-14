@@ -25,6 +25,8 @@ zuul:
       serviceId: hydra-curriculum-service
 
 eureka:
+  instance:
+    preferIpAddress: true
   client:
     register-with-eureka: true
     fetch-registry: true
