@@ -67,19 +67,15 @@ zuul:
       path: /batches/**
       stripPrefix: true
       serviceId: hydra-batch-service
-      url: https://hydra-batch-service.cfapps.io/
     user:
       path: /users/**
       stripPrefix: true
       serviceId: hydra-user-service
-      url: https://hydra-user-service.cfapps.io/
     topic:
       path: /topics/**
       stripPrefix: true
       serviceId: hydra-topic-service
-      url: https://hydra-topic-service.cfapps.io/
     curriculum:
       path: /curricula/**
       stripPrefix: true
       serviceId: hydra-curriculum-service
-      url: https://hydra-curriculum-service.cfapps.io/
